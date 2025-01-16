@@ -1,2 +1,3 @@
- Real-Time-Traffic-Management-
+ Real-Time-Traffic-Management using Greedy Algorithm
+ 
  
