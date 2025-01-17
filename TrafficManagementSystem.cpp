@@ -1,1 +1,66 @@
+#include <iostream>
+#include <vector>
+#include <string>
+#include <algorithm>
+#include <chrono>
+#include <thread>   // Keep this for now, but we will not use it
 
+#ifdef _WIN32
+#include <windows.h>  // This will allow you to use Sleep on Windows
+#endif
+
+using namespace std;
+
+// Greedy algorithm for traffic management
+class TrafficManagementSystem {
+public:
+    struct Intersection {
+        int id;
+        int incomingVehicles;
+        int outgoingVehicles;
+    };
+
+    void welcome() {
+        int choice;
+        do {
+            clearScreen();
+            cout << "======================================" << endl;
+            cout << "  Real-Time Traffic Management System" << endl;
+            cout << "======================================" << endl;
+            cout << "1. Record new vehicles" << endl;
+            cout << "2. Manage traffic at intersections" << endl;
+            cout << "3. Search vehicle records" << endl;
+            cout << "4. View challan records" << endl;
+            cout << "5. Help & Helpline Info" << endl;
+            cout << "6. Exit" << endl;
+            cout << "Enter your choice: ";
+            cin >> choice;
+
+            switch (choice) {
+                case 1: recordVehicle(); break;
+                case 2: manageTraffic(); break;
+                case 3: searchVehicle(); break;
+                case 4: viewChallanRecords(); break;
+                case 5: displayHelp(); break;
+                case 6: cout << "Exiting program. Thank you!" << endl; break;
+                default: cout << "Invalid choice. Try again!" << endl;
+            }
+        } while (choice != 6);
+    }
+
+private:
+    vector<pair<string, string>> vehicleRecords;
+    vector<pair<string, string>> challanRecords;
+
+    void clearScreen() {
+        cout << "\033[2J\033[1;1H";
+    }
+
+    // Using Sleep for Windows instead of thread-based sleep
+    void delay(int seconds) {
+#ifdef _WIN32
+        Sleep(seconds * 1000);  // Sleep takes milliseconds, so multiply by 1000
+#else
+        std::this_thread::sleep_for(std::chrono::seconds(seconds));  // For other platforms
+#endif
+    }
