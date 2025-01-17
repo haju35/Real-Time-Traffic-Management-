@@ -132,3 +132,32 @@ void searchVehicle() {
         }
         delay(2);
     }
+ void viewChallanRecords() {
+        clearScreen();
+        cout << "Challan Records:\n";
+        if (challanRecords.empty()) {
+            cout << "No challan records found.\n";
+        } else {
+            for (const auto &record : challanRecords) {
+                cout << "Reg No: " << record.first << ", Owner: " << record.second << endl;
+            }
+        }
+        delay(3);
+    }
+
+    void displayHelp() {
+        clearScreen();
+        cout << "Help & Helpline Info:\n";
+        cout << "1. Record vehicles to maintain a database of traffic.\n";
+        cout << "2. Manage traffic to prioritize vehicle movement at intersections.\n";
+        cout << "3. Search for vehicle and challan records.\n";
+        cout << "4. Contact emergency services for support.\n";
+        delay(5);
+    }
+};
+
+int main() {
+    TrafficManagementSystem tms;
+    tms.welcome();
+    return 0;
+}
