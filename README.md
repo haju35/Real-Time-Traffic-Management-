@@ -1,4 +1,14 @@
 Real-Time-Traffic-Management using Greedy Algorithm
+
+Contributors of the project
+
+NAME                       ID
+1. Eyassu Melese           NSR/943/13
+2. Hajira Siraj            NSR/1190/13
+3. Hayat Muhammed          NSR/1242/13
+4. Kaleab Mitku            NSR/1348/13
+5. Selman Getachew         NSR/2101/13
+
  
  Example Workflow
  
