@@ -1,14 +1,9 @@
 Real-Time-Traffic-Management using Greedy Algorithm
 
-Contributors of the project
+Contributors of the project              
+ 
+ ![image](https://github.com/user-attachments/assets/21a5d4cb-279e-48d8-9c74-6ba4c81b9150)
 
-   NAME                          ID
-1. Eyassu Melese           	NSR/943/13
-2. Hajira Siraj           	 NSR/1190/13
-3. Hayat Muhammed          	NSR/1242/13
-4. Kaleab Mitku             NSR/1348/13
-5. Selman Getachew         	NSR/2101/13               
-![image](https://github.com/user-attachments/assets/21a5d4cb-279e-48d8-9c74-6ba4c81b9150)
 
 
  
