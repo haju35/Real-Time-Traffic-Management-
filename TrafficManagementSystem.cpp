@@ -64,3 +64,32 @@ private:
         std::this_thread::sleep_for(std::chrono::seconds(seconds));  // For other platforms
 #endif
     }
+
+
+void recordVehicle() {
+        clearScreen();
+        cout << "Enter vehicle registration number: ";
+        string regNo;
+        cin >> regNo;
+        cout << "Enter owner name: ";
+        string ownerName;
+        cin.ignore();
+        getline(cin, ownerName);
+
+        vehicleRecords.emplace_back(regNo, ownerName);
+        cout << "Vehicle record added successfully!" << endl;
+        delay(2);
+    }
+
+    void manageTraffic() {
+        clearScreen();
+        int numIntersections;
+        const int MAX_INTERSECTIONS = 1000;  // Add a reasonable limit
+
+        cout << "Enter the number of intersections (max " << MAX_INTERSECTIONS << "): ";
+        cin >> numIntersections;
+
+        if (numIntersections <= 0 || numIntersections > MAX_INTERSECTIONS) {
+            cout << "Invalid number of intersections. Exiting..." << endl;
+            return;
+        }
