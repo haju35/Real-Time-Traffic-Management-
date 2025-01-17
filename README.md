@@ -61,3 +61,22 @@ Intersection 2: Incoming Vehicles = 70, Outgoing Vehicles = 40
 Intersection 3: Incoming Vehicles = 60, Outgoing Vehicles = 50
 
 Intersection 1: Incoming Vehicles = 50, Outgoing Vehicles = 30
+
+4- Viewing Challan Records
+
+Challan Records:
+
+Reg No: ABC123, Owner: John Doe
+
+Reg No: XYZ789, Owner: Jane Smith
+
+
+5-  Displaying Help Information:
+
+   1. Record vehicles to maintain a database of traffic.
+
+   2. Manage traffic to prioritize vehicle movement at intersections.
+
+   3. Search for vehicle and challan records.
+   
+   4. Contact emergency services for support.
