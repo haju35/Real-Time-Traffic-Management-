@@ -116,3 +116,19 @@ void recordVehicle() {
         }
         delay(5);
     }
+void searchVehicle() {
+        clearScreen();
+        cout << "Enter registration number to search: ";
+        string regNo;
+        cin >> regNo;
+
+        auto it = find_if(vehicleRecords.begin(), vehicleRecords.end(),
+                          [&regNo](const pair<string, string> &record) { return record.first == regNo; });
+
+        if (it != vehicleRecords.end()) {
+            cout << "Vehicle found! Owner: " << it->second << endl;
+        } else {
+            cout << "Vehicle not found!" << endl;
+        }
+        delay(2);
+    }
