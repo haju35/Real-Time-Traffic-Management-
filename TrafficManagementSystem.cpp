@@ -93,3 +93,26 @@ void recordVehicle() {
             cout << "Invalid number of intersections. Exiting..." << endl;
             return;
         }
+  vector<Intersection> intersections(numIntersections);
+        for (int i = 0; i < numIntersections; ++i) {
+            cout << "Enter details for Intersection " << i + 1 << ":\n";
+            intersections[i].id = i + 1;
+            cout << "  Incoming vehicles: ";
+            cin >> intersections[i].incomingVehicles;
+            cout << "  Outgoing vehicles: ";
+            cin >> intersections[i].outgoingVehicles;
+        }
+
+        // Apply greedy algorithm: prioritize intersections with max incoming vehicles
+        sort(intersections.begin(), intersections.end(), [](const Intersection &a, const Intersection &b) {
+            return a.incomingVehicles > b.incomingVehicles;
+        });
+
+        cout << "\nTraffic flow prioritized as follows:\n";
+        for (const auto &intersection : intersections) {
+            cout << "Intersection " << intersection.id
+                 << ": Incoming Vehicles = " << intersection.incomingVehicles
+                 << ", Outgoing Vehicles = " << intersection.outgoingVehicles << endl;
+        }
+        delay(5);
+    }
